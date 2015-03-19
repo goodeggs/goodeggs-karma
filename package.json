@@ -1,6 +1,6 @@
 {
   "name": "goodeggs-ops-karma",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "author": "Good Eggs <open-source@goodeggs.com>",
   "contributors": [
@@ -14,8 +14,7 @@
   },
   "homepage": "https://github.com/goodeggs/goodeggs-ops-karma",
   "bugs": "https://github.com/goodeggs/goodeggs-ops-karma/issues",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^2.1.1",
     "chai-jquery": "^2.0.0",
