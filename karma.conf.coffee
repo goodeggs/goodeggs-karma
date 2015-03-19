@@ -34,6 +34,7 @@ module.exports = (config) ->
     ]
 
     # NOTE: order plugins loaded is important. Seems to load the last one first
+    # NOTE: these plugins must be in devDependencies
     plugins: [
       'karma-browserify'
       'karma-spec-reporter'
