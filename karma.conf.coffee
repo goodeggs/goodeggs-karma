@@ -36,14 +36,14 @@ module.exports = (config) ->
     # NOTE: order plugins loaded is important. Seems to load the last one first
     # NOTE: these plugins must be in devDependencies
     plugins: [
-      'karma-browserify'
-      'karma-spec-reporter'
-      'karma-mocha'
-      'karma-sinon-chai'
-      'karma-jquery'
-      'karma-chai-jquery'
-      'karma-chrome-launcher'
-      'karma-chai'
+      require 'karma-browserify'
+      require 'karma-spec-reporter'
+      require 'karma-mocha'
+      require 'karma-sinon-chai'
+      require 'karma-jquery'
+      require 'karma-chai-jquery'
+      require 'karma-chrome-launcher'
+      require 'karma-chai'
     ]
 
     # list of files to exclude
