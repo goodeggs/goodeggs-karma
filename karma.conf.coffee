@@ -1,3 +1,4 @@
+coffeeify = require 'coffeeify'
 jadeifyRender = require 'goodeggs-jadeify'
 ngAnnotatify = require 'ng-annotatify'
 
@@ -60,7 +61,7 @@ module.exports = (config) ->
       debug: true
       transform: [
         # global transform so thaat we can require .coffee files from node_modules
-        ["coffeeify", {global: true}]
+        [coffeeify, {global: true}]
         [jadeifyRender, {global: true}]
         [ngAnnotatify, {global: true}]
       ]
