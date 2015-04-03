@@ -1,3 +1,4 @@
+path = require 'path'
 coffeeify = require 'coffeeify'
 jadeifyRender = require 'goodeggs-jadeify'
 ngAnnotatify = require 'ng-annotatify'
@@ -11,17 +12,18 @@ module.exports = (config) ->
 
     # list of files / patterns to load in the browser
     files: [
-      'node_modules/angular/angular.js'
-      'node_modules/angular-mocks/angular-mocks.js'
+      path.join(require.resolve('angular'), '..', 'angular.js')
+      path.join(require.resolve('angular-mocks'))
 
       # load css so that we can do some basic visual testing
       'public/build/app.css'
 
       # entry point for app (will watch all required files)
-      'src/client/app/index.coffee'
+      'app/index.coffee'
 
       # test files
-      'src/client/**/*.karma.coffee'
+      'app/**/*.karma.coffee'
+      'local_modules/**/*.karma.coffee'
     ],
 
     # NOTE: order frameworks loaded is important. Seems to load the last one first
@@ -54,8 +56,7 @@ module.exports = (config) ->
     # preprocess matching files before serving them to the browser
     # available preprocessors: https:#npmjs.org/browse/keyword/karma-preprocessor
     preprocessors:
-      'src/client/app/index.coffee': ['browserify']
-      '**/*karma.coffee': ['browserify']
+      '**/*.coffee': ['browserify']
 
     browserify:
       debug: true
