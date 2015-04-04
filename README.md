@@ -1,9 +1,6 @@
 # Goodeggs Ops Karma
 
-
-
-[![Build Status](https://magnum.travis-ci.com/goodeggs/goodeggs-ops-karma.png)](https://magnum.travis-ci.com/goodeggs/goodeggs-ops-karma)
-
+Shared karma test configuration for goodeggs ops apps and node modules.
 
 ## Usage
 
@@ -12,9 +9,20 @@ npm install goodeggs-ops-karma
 ```
 
 ```coffeescript
-goodeggsOpsKarma = require 'goodeggs-ops-karma'
+gulp = require 'gulp'
+opsKarma = require 'goodeggs-ops-karma'
+
+gulp.task 'test', (done) ->
+  opsKarma.run({ singleRun: false }, done)
+
 ```
 
+## API
+
+### opsKarma.run(options, done)
+
+- **options** - override any of the opsKarma default config options
+- **done** - done callback
 
 ## Contributing
 
