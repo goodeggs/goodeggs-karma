@@ -1,16 +1,16 @@
-# Goodeggs Ops Karma
+# Goodeggs Karma
 
 Shared karma test configuration for goodeggs ops apps and node modules.
 
 ## Usage
 
 ```
-npm install goodeggs-ops-karma
+npm install goodeggs-karma
 ```
 
 ```coffeescript
 gulp = require 'gulp'
-opsKarma = require 'goodeggs-ops-karma'
+opsKarma = require 'goodeggs-karma'
 
 gulp.task 'test', (done) ->
   opsKarma.run({ singleRun: false }, done)
@@ -27,7 +27,7 @@ gulp.task 'test', (done) ->
 ## Contributing
 
 ```
-$ git clone https://github.com/goodeggs/goodeggs-ops-karma && cd goodeggs-ops-karma
+$ git clone https://github.com/goodeggs/goodeggs-karma && cd goodeggs-karma
 $ npm install
 $ npm test
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "goodeggs-ops-karma",
+  "name": "goodeggs-karma",
   "version": "2.1.0",
   "description": "",
   "author": "Good Eggs <open-source@goodeggs.com>",
@@ -10,10 +10,10 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/goodeggs/goodeggs-ops-karma.git"
+    "url": "git://github.com/goodeggs/goodeggs-karma.git"
   },
-  "homepage": "https://github.com/goodeggs/goodeggs-ops-karma",
-  "bugs": "https://github.com/goodeggs/goodeggs-ops-karma/issues",
+  "homepage": "https://github.com/goodeggs/goodeggs-karma",
+  "bugs": "https://github.com/goodeggs/goodeggs-karma/issues",
   "dependencies": {
     "coffeeify": "^1.0.0",
     "goodeggs-jadeify": "^1.0.0",
@@ -35,7 +35,7 @@
     "prepublish": "npm run compile"
   },
   "publishConfig": {
-    "registry": "https://goodeggs.registry.nodejitsu.com/",
+    "registry": "https://registry.npmjs.org/",
     "always-auth": true
   }
 }
