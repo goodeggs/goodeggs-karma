@@ -16,7 +16,7 @@ module.exports = (config) ->
       path.join(require.resolve('angular-mocks'))
 
       # load css so that we can do some basic visual testing
-      'public/build/app.css'
+      'build/public/app.css'
 
       # entry point for app (will watch all required files)
       'app/index.coffee'
@@ -88,11 +88,24 @@ module.exports = (config) ->
     # possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO
 
+    # "If any browser does not get captured within the timeout, Karma will kill it and try to launch it again.
+    #  After three attempts to capture it, Karma will give up."
+    # default: 60000
+    captureTimeout: 60000
+
+    # "How long does Karma wait for a browser to reconnect (in ms)." default: 2000
+    browserDisconnectTimeout: 10000
+
+    # "maximum number of tries a browser will attempt in the case of a disconnection"
+    # default: 0
+    browserDisconnectTolerance: 1
+
+    # "How long will Karma wait for a message from a browser before disconnecting from it"
+    # default: 10000
+    browserNoActivityTimeout: 30000
+
     # enable / disable watching file and executing tests whenever any file changes
     autoWatch: true
-
-    # CI mode by default
-    singleRun: true
 
     # start these browsers
     # available browser launchers: https:#npmjs.org/browse/keyword/karma-launcher
