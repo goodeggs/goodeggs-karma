@@ -25,11 +25,15 @@
     "karma-coffee-preprocessor": "^0.2.1",
     "karma-jquery": "^0.1.0",
     "karma-mocha": "^0.1.10",
-    "karma-sinon-chai": "^0.3.0",
+    "karma-sinon-chai": "^1.1.0",
     "karma-spec-reporter": "0.0.16",
     "ng-annotatify": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "chai-jquery": "^2.0.0",
+    "mocha": "^2.3.3"
+  },
   "scripts": {
     "compile": "coffee --bare --compile --output lib/ src/",
     "prepublish": "npm run compile"
