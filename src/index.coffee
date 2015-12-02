@@ -1,4 +1,4 @@
-Server = require('karma').server
+Server = require('karma').Server
 path = require 'path'
 
 module.exports.run = (newConfig, done) ->
