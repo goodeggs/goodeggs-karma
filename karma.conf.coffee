@@ -27,6 +27,7 @@ module.exports = (config) ->
       'local_modules/**/*.karma.coffee'
     ],
 
+    # serve proxy fonts to the paths found in app.css
     proxies:
       '/fonts/': '/base/build/public/fonts/'
 
