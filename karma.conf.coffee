@@ -29,6 +29,7 @@ module.exports = (config) ->
     # NOTE: order frameworks loaded is important. Seems to load the last one first
     frameworks: [
       'browserify'
+      'source-map-support'
       'mocha'
       'chai-jquery'
       'sinon-chai'
@@ -40,6 +41,7 @@ module.exports = (config) ->
     # NOTE: these plugins must be in devDependencies
     plugins: [
       require 'karma-browserify'
+      require 'karma-source-map-support'
       require 'karma-spec-reporter'
       require 'karma-mocha'
       require 'karma-sinon-chai'
