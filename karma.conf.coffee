@@ -17,6 +17,7 @@ module.exports = (config) ->
 
       # load css so that we can do some basic visual testing
       'build/public/app.css'
+      {pattern: 'build/public/fonts/**', watched: false, included: false, served: true}
 
       # entry point for app (will watch all required files)
       'app/index.coffee'
@@ -26,9 +27,14 @@ module.exports = (config) ->
       'local_modules/**/*.karma.coffee'
     ],
 
+    # serve proxy fonts to the paths found in app.css
+    proxies:
+      '/fonts/': '/base/build/public/fonts/'
+
     # NOTE: order frameworks loaded is important. Seems to load the last one first
     frameworks: [
       'browserify'
+      'source-map-support'
       'mocha'
       'chai-jquery'
       'sinon-chai'
@@ -40,6 +46,7 @@ module.exports = (config) ->
     # NOTE: these plugins must be in devDependencies
     plugins: [
       require 'karma-browserify'
+      require 'karma-source-map-support'
       require 'karma-spec-reporter'
       require 'karma-mocha'
       require 'karma-sinon-chai'

@@ -1,4 +1,4 @@
-karma = require('karma').server
+Server = require('karma').server
 path = require 'path'
 
 module.exports.run = (newConfig, done) ->
@@ -8,5 +8,5 @@ module.exports.run = (newConfig, done) ->
   for key, value of newConfig
     config[key] = value
 
-  karma.start config, done
-
+  server = new Server(config, done)
+  server.start()
