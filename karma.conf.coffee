@@ -56,6 +56,10 @@ module.exports = (config) ->
       require 'karma-chai'
     ]
 
+    client:
+      mocha:
+        timeout: 10000
+
     # list of files to exclude
     exclude: [
     ],
