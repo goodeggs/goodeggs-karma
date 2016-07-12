@@ -16,6 +16,7 @@
   "bugs": "https://github.com/goodeggs/goodeggs-karma/issues",
   "dependencies": {
     "coffeeify": "1.1.0",
+    "dirty-chai": "^1.2.2",
     "goodeggs-jadeify": "^1.0.0",
     "karma": "^0.13.15",
     "karma-browserify": "^4.4.1",
@@ -23,6 +24,7 @@
     "karma-chai-jquery": "^1.0.0",
     "karma-chrome-launcher": "^0.2.2",
     "karma-coffee-preprocessor": "^0.3.0",
+    "karma-dirty-chai": "^1.0.2",
     "karma-jquery": "^0.1.0",
     "karma-mocha": "^0.2.1",
     "karma-sinon-chai": "^1.1.0",
@@ -30,8 +32,7 @@
     "karma-spec-reporter": "0.0.23",
     "ng-annotatify": "^1.0.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "compile": "coffee --bare --compile --output lib/ src/",
     "prepublish": "npm run compile"
