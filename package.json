@@ -7,7 +7,7 @@
     "dannynelson <danny@goodeggs.com>"
   ],
   "license": "MIT",
-  "main": "index.coffee",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/goodeggs/goodeggs-karma.git"
