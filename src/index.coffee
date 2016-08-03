@@ -7,8 +7,9 @@ module.exports.run = ({files, sourcemap, watch} = {}, done) ->
 
   if files?
     config.files = files
-  if watch?
-    config.singleRun = if watch is true then false else true
+  if watch is true
+    config.singleRun = false
+    config.reporters = ['dots']
   if sourcemap?
     config.browserify.debug = sourcemap
 
