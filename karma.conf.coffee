@@ -102,7 +102,7 @@ module.exports =
 
   # level of logging
   # possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-  logLevel: config.LOG_INFO
+  logLevel: 'INFO'
 
   # "If any browser does not get captured within the timeout, Karma will kill it and try to launch it again.
   #  After three attempts to capture it, Karma will give up."
