@@ -31,6 +31,8 @@ module.exports = (config) ->
     proxies:
       '/fonts/': '/base/build/public/fonts/'
 
+    singleRun: true
+
     # NOTE: order frameworks loaded is important. Seems to load the last one first
     frameworks: [
       'browserify'
