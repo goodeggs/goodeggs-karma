@@ -1,17 +1,19 @@
 Server = require('karma').Server
 path = require 'path'
+cloneDeep = require 'lodash.clonedeep'
+
+karmaConfig = require '../karma.conf'
 
 module.exports.run = ({files, sourcemap, watch} = {}, done) ->
-  config =
-    configFile: path.resolve(__dirname, '..', 'karma.conf.coffee')
+  karmaConfigClone = cloneDeep(karmaConfig)
 
   if files?
-    config.files = files
+    karmaConfigClone.files = files
   if watch is true
-    config.singleRun = false
-    config.reporters = ['dots']
+    karmaConfigClone.singleRun = false
+    karmaConfigClone.reporters = ['dots']
   if sourcemap?
-    config.browserify.debug = sourcemap
+    karmaConfigClone.browserify.debug = sourcemap
 
-  server = new Server(config, done)
+  server = new Server(karmaConfigClone, done)
   server.start()
