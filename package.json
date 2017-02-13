@@ -15,6 +15,7 @@
   "homepage": "https://github.com/goodeggs/goodeggs-karma",
   "bugs": "https://github.com/goodeggs/goodeggs-karma/issues",
   "dependencies": {
+    "chai-jquery": "*",
     "coffeeify": "1.1.0",
     "dirty-chai": "^1.2.2",
     "goodeggs-jadeify": "^1.0.0",
@@ -31,7 +32,9 @@
     "karma-source-map-support": "^1.1.0",
     "karma-spec-reporter": "0.0.23",
     "lodash.clonedeep": "^4.4.1",
-    "ng-annotatify": "^1.0.0"
+    "ng-annotatify": "^1.0.0",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0"
   },
   "devDependencies": {
     "coffee-script": "^1.10.0"
